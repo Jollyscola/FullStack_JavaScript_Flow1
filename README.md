@@ -32,6 +32,13 @@ JavaScript:
 var hej = "hej";
 var i = 1;
 ```
+
+
+---
+## 2.Explain the two strategies for improving JavaScript: ES6 (es2015) + ES7, versus Typescript. What does it require to use these technologies: In our backend with Node and in (many different) Browsers
+---
+
+
 Typescript er et åben source så alle kan bruge det.
 
 ```
