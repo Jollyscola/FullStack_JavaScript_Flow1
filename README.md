@@ -41,8 +41,11 @@ var i = 1;
 
 I form af Typescript TS) er det bygget op ved det ny JavaScript(JS) function og er nyt udgangspunkt er at det har typer med som f.eks String Number boolean mv. Noget som er smart ved TS er, at det ligesom Java har den et fejl setup som gøre at nå man skrive noget forkert kodning komme den op med en fejl og det instedet for i JS er det først i runtime eller når man kører projekt, at man kan se fejlen.
 Typscript (TS) har typer i sig i stedet for JavaScript som ikke har typer. 
+
 TS er superset af JS og har alle gode features fra JS. I JS kan man først se fejl når man kører det, men i TS fanger og viser fejlen og gør det meget lettere for programmøren for hvad der skal rettes. 
+
 Når man skal køre TS skal det omdannes til JS, hvor man compiled til Almindelig JS og kan derefter gennemføre i hvilken som helst JS browser. Den kommando man skal bruge for at dette kan lade sig gøre hedder tsconfig.json.
+
 Eksemple af tsconfig.json
 
 ```
@@ -55,5 +58,14 @@ Eksemple af tsconfig.json
   }
 }
 ```
+---
+##  3.Explain generally about node.js, when it “makes sense” and npm, and how it “fits” into the node echo system.
+---
+
+Node er bygget op omkring cloud med JS, så det er let at bygge netværksapplikationer. Den bruger single-theaded, noneblocking, asynchronous programmering. Node er blevet, lavet så JS kan køre i backend med de samme JS-fordele. 
+
+Node er en slags ”virtual” maskine som ligner Java. Node kører på multi-platform. 
+
+Vil man gerne køre Node, skal man installere de forskellige Node pakker. Det udtryk man bruger på Node.js er udtrykket npm kort sagt betyder Node.js: node package management, som er brugt til JS programmet.
 
 
