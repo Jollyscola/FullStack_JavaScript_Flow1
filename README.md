@@ -34,4 +34,15 @@ var i = 1;
 ```
 Typescript er et åben source så alle kan bruge det.
 
+```
+{
+  "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "outDir": "build",
+      "sourceMap": true
+  }
+}
+```
+
 
