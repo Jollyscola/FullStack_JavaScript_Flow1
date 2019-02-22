@@ -104,15 +104,26 @@ WebPack er en åben source som pakker JS filer sammen i en eller flere bundter, 
 ## 6.	Explain the purpose of “use strict” and Linters, exemplified with ESLint
 ---
 
-Formålet med "use strict" er at angive, at koden skal udføres i "strict mode" og her kan du f.eks. ikke bruge undeclared variables. Declared i begyndelsen af et script har globalt anvendelsesområde (al kode i scriptet vil udføres i ”strict mode”):
+Formålet med "use strict" er at angive, at koden skal udføres i "strict mode" og her kan du f.eks. ikke bruge undeclared variables. Declared i begyndelsen af et script har globalt anvendelsesområde (al kode i scriptet vil udføres i ”strict mode”),
+Linters som JSLint eller JSHint kan registrere potentielle bugs/fejl samt kodning, som er svært at vedligeholde. Kode linting er en måde at øge kodekvaliteten på.
+ESLint er et værktøj til at identificere og rapportere om mønstre, der findes i ECMAScript / JavaScript-kode. På mange måder ligner det JSLint og JSHint med nogle få undtagelser:
+•	ESLint bruger Espree til JavaScript parsing.
+•	ESLint bruger en AST til at evaluere mønstre i kode.
+•	ESLint er helt plugget, hver enkelt regel er et plugin, og du kan tilføje flere ved kørsel.
 
+
+---
+## 7. Explain using sufficient code examples the following features in JavaScript.
+---
+Variable/function-Hoisting
+Hoisting er JS’s standardadfærd og betyder, at JavaScript flytter deklarationer til toppen af filen. I JavaScript kan en variabel deklareres, efter at den er blevet brugt. JavaScript kan kun hoist angivelser, ikke initialiseringer.
 
 ```
 1.console.log(s);
 2. var s = 10;
 3. output: undefined
 ```
-undefined: eftersom console.log(s); køre før af den s variable ikke defineret
+undefined: eftersom console.log(s); køre før at den s variable ikke er defineret.
 
 ```
 1.var s;
@@ -124,15 +135,21 @@ undefined: eftersom nu er variable s og nå colsole.log(s); så nå den køre ve
 at vi defineret at s = 10.
 
 ```
-var s = 10; 
-console.log(s);
-output: 10
+1.var s = 10; 
+2.console.log(s);
+3. output: 10
 ```
 
-Linters som JSLint eller JSHint kan registrere potentielle bugs/fejl samt kodning, som er svært at vedligeholde. Kode linting er en måde at øge kodekvaliteten på.
-ESLint er et værktøj til at identificere og rapportere om mønstre, der findes i ECMAScript / JavaScript-kode. På mange måder ligner det JSLint og JSHint med nogle få undtagelser:
-•	ESLint bruger Espree til JavaScript parsing.
-•	ESLint bruger en AST til at evaluere mønstre i kode.
-•	ESLint er helt plugget, hver enkelt regel er et plugin, og du kan tilføje flere ved kørsel.
 
+Deceleration Functions:
 
+```
+1.Name("Miau");
+2.function Name(name) {
+3. console.log("mine katte navn er " + name);
+4.  }
+5. Name("Tom")
+output: 
+mine katte navn er Miau
+mine katte navn er Tom
+```
