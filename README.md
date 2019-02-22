@@ -21,6 +21,7 @@ I form at javascript og java at javscript script sprog og at java er et kompiler
 |Java har block based scope|Javascript har function based scope og object based context|
 	
 
+Eksemple i from af java og javascript af typer 
 
 ```
 Java:
