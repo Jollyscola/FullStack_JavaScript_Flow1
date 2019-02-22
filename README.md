@@ -162,8 +162,8 @@ Et funktionsudtryk kan gemmes i en variabel, så de har ikke brug for et funktio
 
 ```
 1. famile("Poul");
-2. let famile = function (famile) {
-3.  console.log("min famile navn er " + famile);
+2. let famile = function (navn) {
+3.  console.log("min famile navn er " + navn);
 4. };
 output: ReferenceError: famile is not defined
 ```
