@@ -2,7 +2,7 @@
 hej
 
 ```
-# include Java:
+Java:
 String s = "Hello World!";
 int i = 1;
 
