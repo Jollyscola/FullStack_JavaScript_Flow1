@@ -175,7 +175,21 @@ output: ReferenceError: famile is not defined
 4. famile("Hans");
 output: Hans
 ```
+---
+## 8. this in JavaScript and how it differs from what we know from Java/.net.
+---
 
+this i JavaScript refererer til "ejer" af den funktion som udføres eller til objektet som funktionen er en metode af. I Java refererer dette til det nuværende instansobjekt, som metoden udfører.
 
-
+```
+1. var person = {
+2.    fname: "John",
+3.    lname : "Doe",
+4.    fullName : function() {
+5.      return this.fname + " " + this.lname;
+6.    }
+7.  };
+8.
+9.  console.log(person.fullName())
+  ```
 
