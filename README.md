@@ -12,13 +12,13 @@ I form at javascript og java at javscript script sprog og at java er et kompiler
 |Java er et programming sprog|	JavaScript er et integreret computer programmerings sprog|
 |Java var førsst dukkede op i 23-maj-1995|JavaScript var først dukkede op 4-dec-1995|
 |Java kode compiled til bytecode|JavaScript kode er alt i tekst og har ikke bruge for at compile|
-|Java kode køre på virtual machine |Javascript kode køre på webbrowser( i form den må vi køre også node bruges som virtual machine)|
-|Java er multithreaded|Javascript er ikke multithreaded|
-|Java er lignende c++ og c# |Javascript lignende perl og python|
-|Java er compiled og interpreted programming sprog|Javascript er kun interpreted programming language|
-|Java er ikke et klint side scripting sprog|Javascript er et klint side scripting sprog at javascript køres mest på klint side|
-|Java program har file exension Java|Javscrip har file extension “.js”|
-|Java har block based scope|Javascript har function based scope og obeject based context|
+|Java kode køre på virtual machine |JavaScript kode køre på webbrowser( i form den må vi køre også node bruges som virtual machine)|
+|Java er multithreaded|JavaScript er ikke multithreaded|
+|Java er lignende c++ og c# |JavaScript lignende perl og python|
+|Java er compiled og interpreted programming sprog|JavaScript er kun interpreted programming language|
+|Java er ikke et klint side scripting sprog|JavaScript er et klint side scripting sprog at javascript køres mest på klint side|
+|Java program har file exension Java|JavaScrip har file extension “.js”|
+|Java har block based scope|Javascript har function based scope og object based context|
 	
 
 
