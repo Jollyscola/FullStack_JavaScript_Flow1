@@ -114,16 +114,16 @@ Formålet med "use strict" er at angive, at koden skal udføres i "strict mode" 
 ```
 undefined: eftersom console.log(s); køre før af den s variable ikke defineret
 
-``
+```
 1.var s;
 2. console.log(s);
 3.s = 10;
 output: undefined
-``
+```
 undefined: eftersom nu er variable s og nå colsole.log(s); så nå den køre ved den intet hvad den eftersom det først på 3 linje
 at vi defineret at s = 10.
 
-´´´
+```
 var s = 10; 
 console.log(s);
 output: 10
