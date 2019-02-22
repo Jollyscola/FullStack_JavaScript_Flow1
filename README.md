@@ -100,4 +100,39 @@ WebPack:
 
 WebPack er en åben source som pakker JS filer sammen i en eller flere bundter, som kan køre i browseren. Den er i stand til at bundte mange forskellige typer filer og grunden til at man pakker det hele sammen til bundter, er at man på den måde mindsker mængden af requests, som skal udføres. 
 
+---
+## 6.	Explain the purpose of “use strict” and Linters, exemplified with ESLint
+---
+
+Formålet med "use strict" er at angive, at koden skal udføres i "strict mode" og her kan du f.eks. ikke bruge undeclared variables. Declared i begyndelsen af et script har globalt anvendelsesområde (al kode i scriptet vil udføres i ”strict mode”):
+
+
+```
+1.console.log(s);
+2. var s = 10;
+3. output: undefined
+```
+undefined: eftersom console.log(s); køre før af den s variable ikke defineret
+
+``
+1.var s;
+2. console.log(s);
+3.s = 10;
+output: undefined
+``
+undefined: eftersom nu er variable s og nå colsole.log(s); så nå den køre ved den intet hvad den eftersom det først på 3 linje
+at vi defineret at s = 10.
+
+´´´
+var s = 10; 
+console.log(s);
+output: 10
+```
+
+Linters som JSLint eller JSHint kan registrere potentielle bugs/fejl samt kodning, som er svært at vedligeholde. Kode linting er en måde at øge kodekvaliteten på.
+ESLint er et værktøj til at identificere og rapportere om mønstre, der findes i ECMAScript / JavaScript-kode. På mange måder ligner det JSLint og JSHint med nogle få undtagelser:
+•	ESLint bruger Espree til JavaScript parsing.
+•	ESLint bruger en AST til at evaluere mønstre i kode.
+•	ESLint er helt plugget, hver enkelt regel er et plugin, og du kan tilføje flere ved kørsel.
+
 
