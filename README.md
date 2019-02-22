@@ -142,14 +142,36 @@ at vi defineret at s = 10.
 
 
 Deceleration Functions:
+Funktioner som er angivet med følgende syntaks udføres ikke med det samme. De er "gemt til senere brug" og vil blive udført senere, når de ”påberåbes” (called upon). Disse typer funktioner fungerer, hvis du kalder dem FØR eller EFTER, når de er blevet defineret. Hvis du kalder en decelerationsfunktion, før den er defineret - Hoisting – vil den fungere korrekt.
 
 ```
-1.Name("Miau");
-2.function Name(name) {
-3. console.log("mine katte navn er " + name);
+1.Navn("Miau");
+2.function Navn(navn) {
+3. console.log("mine katte navn er " + navn);
 4.  }
-5. Name("Tom")
+5. Navn("Tom")
 output: 
 mine katte navn er Miau
 mine katte navn er Tom
 ```
+
+Expression Functions:
+Et funktionsudtryk kan gemmes i en variabel, så de har ikke brug for et funktionsnavn. De vil også blive navngivet som en anonym funktion (en funktion uden navn). For at påberåbe (called) skal de altid bruge et variabelt navn. Disse slags funktioner virker ikke, hvis opkald (calls), før det er defineret, hvilket betyder, at Hoisting ikke sker her. Vi skal altid definere udtryksfunktionen først og derefter påberåbe det.
+
+```
+1. famile("Poul");
+2. let famile = function (famile) {
+3.  console.log("min famile navn er " + famile);
+4. };
+output: ReferenceError: famile is not defined
+```
+
+```
+1. let famile = function (navn) {
+2.  console.log("min famile navn er " + navn);
+3. };
+4. famile("Hans");
+output: Hans
+```
+
+
