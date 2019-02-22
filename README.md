@@ -32,5 +32,6 @@ JavaScript:
 var hej = "hej";
 var i = 1;
 ```
+Typescript er et åben source så alle kan bruge det.
 
 
