@@ -29,15 +29,15 @@ i java har statik type så skal man angive hvilket slags type man f.eks(integer,
 
 ```
 Java:
-String hej = "Hej";
-int i = 1;
+1. String hej = "Hej";
+2. int i = 1;
 
 ```
 i javascript har vi dynmaisk type så derfor behøver vi ikke at angive typer af en oprettet variabel 
 ```
 JavaScript:
-var hej = "hej";
-var i = 1;
+1. var hej = "hej";
+2. var i = 1;
 ```
 
 ![javascript-java](https://user-images.githubusercontent.com/32638165/53271927-25753500-36f0-11e9-812b-50984724a685.jpg)
@@ -183,13 +183,40 @@ this i JavaScript refererer til "ejer" af den funktion som udføres eller til ob
 
 ```
 1. var person = {
-2.    fname: "John",
-3.    lname : "Doe",
+2.    fname: "Jens",
+3.    lname : "Hans",
 4.    fullName : function() {
 5.      return this.fname + " " + this.lname;
 6.    }
 7.  };
 8.
 9.  console.log(person.fullName())
+output: Jens Hans
   ```
+  
+---  
+## 9.	Function Closures and the JavaScript Module Pattern
+---
+Funktionen Closures er en funktion i JavaScript, hvor en indre funktion har adgang til den ydre (omsluttende) funktionens variabler - en rækkekæde (a scope chain).
+Closure har tre anvendelsesområder:
+•	den har adgang til sit eget anvendelsesområde - variabler defineret mellem sine krøllede parenteser
+•	den har adgang til den ydre funktions variabler
+•	den har adgang til de globale variabler
 
+The JavaScript Module Pattern er et af de mest almindelige designmønstre, der bruges i JavaScript og med god grund. Modulmønsteret er let at bruge og skaber indkapsling af kodningen. Moduler bruges almindeligvis som singleton-stilobjekter, hvor kun én forekomst eksisterer. Modulmønsteret er fantastisk til service og test / TDD. Der er mange forskellige variationer af modulmønstre.
+
+```
+function outer() {
+
+   var b = 10;
+   function inner() {
+        
+         var a = 20; 
+         console.log(a+b);
+    }
+   return inner;
+}
+
+var X = outer(); //outer() invoked the first time
+var Y = outer(); //outer() invoked the second time
+```
