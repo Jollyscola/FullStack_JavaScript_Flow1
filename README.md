@@ -757,6 +757,8 @@ function identity(arg: number): number {
 
 
 
+
+
 # Callbacks, Promises and async/await
 
 Explain about promises in ES-6 including, the problems they solve, a quick explanation of the Promise API and:
