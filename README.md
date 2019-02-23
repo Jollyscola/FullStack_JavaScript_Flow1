@@ -391,8 +391,95 @@ output: ['Lars', 'Peter, 'Jan']
 ## 13.	Explain the methods map, filter and reduce
 ---
 
+ex. map og filter nå de køre igennem et array så lavet de et nyt array
+filter: lavet en betingelse hvilke elementer der kan komme i det ny array de andre blev fjern
+map: den køre function på alle elementer af resultet kommet ind i det ny array
+reduce: den samler elementer til et resultat, så den kan lav største værdi mindst værdi sum af værdi
+i reduce kan man også lavet et nyt hvis f.eks det eksemple jeg lagt med.
+```
+var names = ['lars', 'hans', 'jan', 'bob', 'bo']
+var dav = names.filter((maps1) => {
+
+    if (maps1.length >= 3) {
+        namesarray.push(maps1)
+        return namesarray;
+    }
+
+})
+console.log(dav)
+```
+```
+var names = ['lars', 'hans', 'jan', 'bob', 'bo']
+var maps = names.map((maps1) => {
+
+    var map = maps1.toUpperCase();
+    return map
+});
+console.log(maps)
+```
+```
+var votes = ["Clinton", "Trump", "Clinton", "Clinton", "Trump", "Trump", "Trump", "None", "Dav"];
+
+
+var s = votes.reduce(vot, {});
+
+
+function vot(item, counter) {
+   
+    if (counter in item) {
+       
+        item[counter]++
+    } else {
+
+        item[counter] = 1;
+    }
+    return item;
+}
+
+console.log(s)
+```
+
 
 ---
 ## 14.	Provide examples of user-defined reusable modules implemented in Node.js
+---
+
+ex. i den her fileprint genanvendelige module for den her fileprint
+```
+function fileprint(dirname, ext, callback) {
+    fs.readdir(dirname, (err, data) => {
+        if (err) {
+            return callback(err)
+        }
+        const res = data.filter(fil => path.extname(fil) === '.'+ext)
+        return callback(null, res);
+    }
+
+    );
+
+}
+module.exports = fileprint
+```
+```
+const filterDire = require('./makeitmodular06')
+
+const diretory2 = process.argv[2];
+const ext = process.argv[3];
+
+filterDire(diretory2,ext, (err,data) => {
+    if(err){
+    throw new Error("Uppps:" + err)
+    }
+
+    data.forEach(element => {
+        console.log(element)
+    });
+})
+```
+---
+# ES6,7,8... and TypeScript
+
+---
+## 15.	Provide examples and explain the es2015 features: let, arrow functions, this, rest parameters, de-structuring assignments, maps/sets etc.
 ---
 
