@@ -387,4 +387,12 @@ var newArray = myFilter(names, function (name) {
 console.log(newArray)
 output: ['Lars', 'Peter, 'Jan']
 ```
+---
+## 13.	Explain the methods map, filter and reduce
+---
+
+
+---
+## 14.	Provide examples of user-defined reusable modules implemented in Node.js
+---
 
