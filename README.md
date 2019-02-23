@@ -807,7 +807,7 @@ doom1()
 ---
 ## 23.	Example(s) that demonstrate how to implement our own promise-solutions.
 ---
-
+![promise Example](https://github.com/Jollyscola/FullStack_JavaScript_Flow1/blob/master/promise/myPromise.js)
 ---
 ## 24.	Example(s) that demonstrate error handling with promises
 ---
