@@ -120,6 +120,29 @@ ESLint er et værktøj til at identificere og rapportere om mønstre, der findes
 •	ESLint bruger en AST til at evaluere mønstre i kode.
 •	ESLint er helt plugget, hver enkelt regel er et plugin, og du kan tilføje flere ved kørsel.
 
+ex: 
+man kan få explment
+
+ex:
+
+  
+
+  The statement "use strict"; instructs the browser to use the Strict mode, which is a reduced and safer feature set of JavaScript.
+    List of features (non-exhaustive)
+    Disallows global variables. (Catches missing var declarations and typos in variable names
+    Silent failing assignments will throw error in strict mode (assigning NaN = 5;)
+    Attempts to delete undeletable properties will throw (delete Object.prototype)
+    Requires all property names in an object literal to be unique (var x = {x1: "1", x1: "2"})
+    Function parameter names must be unique (function sum (x, x) {...})
+    Forbids octal syntax (var x = 023; some devs assume wrongly that a preceding zero does nothing to change the number.)
+    Forbids the with keyword
+    eval in strict mode does not introduce new variables
+    Forbids deleting plain names (delete x;)
+    Forbids binding or assignment of the names eval and arguments in any form
+    Strict mode does not alias properties of the arguments object with the formal parameters. (i.e. in function sum (a,b) { return arguments[0] + b;} This works because arguments[0] is bound to a and so on. )
+    arguments.callee is not supported
+
+
 
 ---
 ## 7. Explain using sufficient code examples the following features in JavaScript.
@@ -190,6 +213,25 @@ output: Hans
 
 this i JavaScript refererer til "ejer" af den funktion som udføres eller til objektet som funktionen er en metode af. I Java refererer dette til det nuværende instansobjekt, som metoden udfører.
 
+ex.
+hvis det er helt alene eller ind i function`this` så er et global objekt (men kun i function hvis an ikke kører strict)
+
+
+Hvis  ind i function så give den globat object window
+```
+1.function myfunction(){
+2.return this;
+3.}
+4. console.log(myfunction());
+output: object window
+```
+In HTML event handlers, this refers to the HTML element that received the event:
+i HTML event handlers this refers til et html element der recived til event.
+```
+1. <button onclick="this.style.display='none'">Click here to delete button</button> 
+output: button get delete // sorry
+```
+
 ```
 1. var person = {
 2.    fname: "Jens",
@@ -202,6 +244,8 @@ this i JavaScript refererer til "ejer" af den funktion som udføres eller til ob
 9.  console.log(person.fullName())
 output: Jens Hans
   ```
+  
+  
   
 ---  
 ## 9.	Function Closures and the JavaScript Module Pattern
@@ -229,3 +273,36 @@ function outer() {
 var X = outer(); //outer() invoked the first time
 var Y = outer(); //outer() invoked the second time
 ```
+
+
+ex. Så nå den køre først gang køre den ind i function anden gang køre den global så kan den husk værdi næste gang
+```
+var outerv2 = (()=> {
+    var b = 10;
+
+    return function() {
+        b++;
+        return b;
+    }
+}
+)();
+console.log(outerv2())
+console.log(outerv2())
+output: 
+11
+12
+```
+---
+## 10.	Immediately-Invoked Function Expressions (IIFE)
+---
+
+En IIFE ((Immediately Invoked Function Expression) er en JavaScript-funktion, der kører, så snart den er defineret
+
+---
+## 11.	JavaScripts Prototype
+---
+
+Hvert JavaScript-objekt har en prototype. Prototypen er også et objekt. Objekter oprettet ved hjælp af et objekt bogstaveligt eller med nyt objekt (), arver fra en prototype kaldet Object.prototype. Alle JavaScript-objekter (Dato, Array, RegExp, Funktion, ....) arver fra Object.prototype. 
+Det er blot en henvisning til et andet objekt og indeholder fælles attributter/egenskaber på tværs af alle forekomster af objektet. Et objekts prototypeattribut angiver det objekt, hvorfra det arver egenskaber.
+
+
