@@ -84,8 +84,7 @@ Node er en slags ”virtual” maskine som ligner Java. Node kører på multi-pl
 
 Vil man gerne køre Node, skal man installere de forskellige Node pakker. Det udtryk man bruger på Node.js er udtrykket npm kort sagt betyder Node.js: node package management, som er brugt til JS programmet.
 
-ex.
-nå den er i et event og nå man skal opdater mange ting samtidig og man kan bruge det til database. 
+ex. Nå den er i et event og nå man skal opdater mange ting samtidig og man kan bruge det til database. 
 
 
 ---
