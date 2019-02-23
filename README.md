@@ -756,8 +756,11 @@ function identity(arg: number): number {
 ---
 
 
+Eksample på Pyramid Of Doom
 
+![pyramidofdoom](https://user-images.githubusercontent.com/32638165/53292032-d2b57f00-37bc-11e9-9bb6-311745bfd190.jpg)
 
+Man skal direkte undergå det her probelem i sted for skal man bruge Promises eller async await
 
 # Callbacks, Promises and async/await
 
