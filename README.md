@@ -336,4 +336,55 @@ Person { firstName: 'Sally',lastName: 'Rally',age: 48,eyeColor: 'grøn' }
 A Callback Function er en funktion, der skal udføres, efter at en anden funktion er færdiggjort - dermed navnet 'tilbagekald' (‘call back’). Funktioner der gør dette kaldes højere ordensfunktioner. 
 
 
+ex .Det her er et callback med en parameter.
+```
+var names = ['lars', 'hans', 'jan', 'bob', 'bo']
+
+function myFilterto3(element) {
+
+    if (element.length > 3) {
+        return element
+    }
+    return null;
+}
+
+function myFilter(array, callback) {
+    let newarray = [];
+    for (var i = 0; i < array.length; i++) {
+        if (callback(array[i])) {
+            newarray.push(array[i]);
+        }
+    }
+    return newarray;
+}
+console.log(myFilter(names, myFilterto3))
+
+output: ['lars','hans']
+```
+
+ex: callback med innerline function.
+```
+var names = ["Lars", "Peter", "Jan", "Bo"];
+function myFilter(array, callback) {
+    //console.log("element: ", callback)
+
+    newarray = [];
+    for(var i = 0; i < array.length; i++)
+    
+    if (callback(array[i])) {
+        newarray.push(array[i]);
+    }
+    return newarray;
+}
+
+var newArray = myFilter(names, function (name) {
+
+    if(name.length > 2){
+        return name;
+    }
+    return null;
+});
+console.log(newArray)
+output: ['Lars', 'Peter, 'Jan']
+```
 
