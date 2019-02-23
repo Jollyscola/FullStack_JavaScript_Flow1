@@ -798,7 +798,11 @@ doom1()
 ---
 ## 22.	Example(s) that demonstrate how to execute asynchronous (promise-based) code in serial or parallel
 ---
+Serial or parallel Example
 
+Serial Example
+
+Serial Example - async
 
 ---
 ## 23.	Example(s) that demonstrate how to implement our own promise-solutions.
