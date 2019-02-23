@@ -69,7 +69,7 @@ Eksemple af tsconfig.json
   }
 }
 ```
-install typescript skal man have install node.js
+Install typescript(-g mener global) skal man have install node.js
 ```
 npm install -g typescript
 ```
