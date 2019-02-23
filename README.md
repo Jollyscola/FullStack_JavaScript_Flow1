@@ -756,11 +756,8 @@ function identity(arg: number): number {
 ---
 
 
-Eksample på Pyramid Of Doom
 
-![pyramidofdoom](https://user-images.githubusercontent.com/32638165/53292032-d2b57f00-37bc-11e9-9bb6-311745bfd190.jpg)
 
-Man skal direkte undergå det her probelem i sted for skal man bruge Promises eller async await
 
 # Callbacks, Promises and async/await
 
@@ -769,10 +766,39 @@ Explain about promises in ES-6 including, the problems they solve, a quick expla
 ---
 ## 21.	Example(s) that demonstrate how to avoid the callback hell  (“Pyramid of Doom")
 ---
+Eksample på Pyramid Of Doom
 
+```
+doom1(function(){
+    doom2(function(){
+        doom3(function(){
+            doom4(function({
+                ....
+            }))
+        })
+    })
+
+})
+```
+
+![pyramidofdoom](https://user-images.githubusercontent.com/32638165/53292032-d2b57f00-37bc-11e9-9bb6-311745bfd190.jpg)
+
+Man skal direkte undergå det her probelem i sted for skal man bruge Promises eller async await
+
+![callbackmate](https://user-images.githubusercontent.com/32638165/53292085-9a627080-37bd-11e9-90c3-2720cd952c67.png)
+
+### How to fix/ preven the callback/pyramid of hel
+```
+doom1()
+.then(doom2)
+.then(doom3)
+.then(doom4)
+.catch(errorhandlingthebug)
+```
 ---
 ## 22.	Example(s) that demonstrate how to execute asynchronous (promise-based) code in serial or parallel
 ---
+
 
 ---
 ## 23.	Example(s) that demonstrate how to implement our own promise-solutions.
