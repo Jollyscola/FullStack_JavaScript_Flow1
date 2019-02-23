@@ -595,3 +595,61 @@ console.log(map.has('sos') //true because oof === 'sos';
 ## 16.	Explain and demonstrate how es2015 supports modules (import and export) similar to what is offered by NodeJS
 ---
 
+ex: export hver ting der skal export  
+
+Export
+```
+//------------dosomething-------
+export function family(firstname, lastname) {
+ return firstname + " "  + lastname;
+}
+export function tal(firstnumber, lastnumber) {
+ return firstnumber / lastnumber;
+}
+```
+Import
+```
+//-----------main--------
+import{family, tal} from 'dosomething';
+console.log(family("Jens","Hans"));
+console.log(tal(10,5)
+output: 
+Jens Hans
+2
+```
+---
+## 17.	Provide an example of ES6 inheritance and reflect over the differences between Inheritance in Java and in ES6.
+---
+
+i form af prototype kan man lavet Inheritance.
+
+```
+class Dyr {
+    constructor() {}
+    static dyr() {
+      return 'jeg har et dyr';
+    }
+  }
+  
+  class Hviketdyr extends Dyr {
+    constructor() {}
+    static hund() {
+      return super.dyr() + ' som er en hund';
+    }
+    static kat() {
+        return super.dyr() + ' som er en kat';
+      }
+  }
+  
+  console.log(Hviketdyr.hund()) 
+  console.log(Hviketdyr.kat()) 
+  
+  output: 
+  jeg har et dyr som er en hund
+  jeg har et dyr som er en kat
+```
+
+---
+## 18.	Provide examples with es-next, running in a browser, using Babel and Webpack
+---
+
