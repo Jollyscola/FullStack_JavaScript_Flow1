@@ -742,3 +742,17 @@ console.log(ls.log("dav,"med dig"))
 output: value 1 dav, value 2 med dig
 
 ```
+
+### Generics
+
+```
+function identity(arg: number): number {
+    return arg;
+}
+```
+
+---
+### 20.	Explain the ECMAScript Proposal Process for how new features are added to the language (the TC39 Process)
+---
+
+
