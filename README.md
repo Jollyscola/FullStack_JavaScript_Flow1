@@ -800,9 +800,9 @@ doom1()
 ---
 ![Serial or parallel Example](https://github.com/Jollyscola/FullStack_JavaScript_Flow1/blob/master/promise/parSer.js)
 
-Serial Example
+![Serial Example](https://github.com/Jollyscola/FullStack_JavaScript_Flow1/blob/master/promise/promiseexercises.js)
 
-Serial Example - async
+![Serial Example - async](https://github.com/Jollyscola/FullStack_JavaScript_Flow1/blob/master/promise/ex2.js)
 
 ---
 ## 23.	Example(s) that demonstrate how to implement our own promise-solutions.
