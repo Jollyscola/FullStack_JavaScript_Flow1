@@ -752,7 +752,48 @@ function identity(arg: number): number {
 ```
 
 ---
-### 20.	Explain the ECMAScript Proposal Process for how new features are added to the language (the TC39 Process)
+## 20.	Explain the ECMAScript Proposal Process for how new features are added to the language (the TC39 Process)
 ---
 
 
+
+Callbacks, Promises and async/await
+
+Explain about promises in ES-6 including, the problems they solve, a quick explanation of the Promise API and:
+
+---
+## 21.	Example(s) that demonstrate how to avoid the callback hell  (“Pyramid of Doom")
+---
+
+---
+## 22.	Example(s) that demonstrate how to execute asynchronous (promise-based) code in serial or parallel
+---
+
+---
+## 23.	Example(s) that demonstrate how to implement our own promise-solutions.
+---
+
+---
+## 24.	Example(s) that demonstrate error handling with promises
+---
+
+
+---
+## 25. Explain about JavaScripts async/await, how it relates to promises and reasons to use it compared to the plain promise API.
+---
+
+---
+## 26. Provide examples to demonstrate
+---
+
+---
+## 27. Why this often is the preferred way of handling promises
+---
+
+---
+## 28. Error handling with async/await
+---
+
+---
+## 29. Serial or parallel execution with async/await.
+---
