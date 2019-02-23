@@ -70,6 +70,11 @@ Eksemple af tsconfig.json
   }
 }
 ```
+install typescript skal man have install node.js
+```
+npm install -g typescript
+```
+
 ---
 ##  3.Explain generally about node.js, when it “makes sense” and npm, and how it “fits” into the node echo system.
 ---
