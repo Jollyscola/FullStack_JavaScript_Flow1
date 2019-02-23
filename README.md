@@ -653,3 +653,92 @@ class Dyr {
 ## 18.	Provide examples with es-next, running in a browser, using Babel and Webpack
 ---
 
+
+
+
+ES.next eksemple
+```
+import { memoize } from './point.js';
+
+const upperCase = memoize(string => string.toUpperCase());
+
+
+```
+
+Nu skal vi have den import ind.
+
+```
+var memoize = require('./demoV3.js').memoize;
+
+var upperCase = memoize(function(string) {
+  return string.toUpperCase();
+});
+
+
+```
+
+kort kodning er lette forstår.
+
+---
+## 19.	Provide a number of examples to demonstrate the benefits of using TypeScript, including, types, interfaces, classes and generics
+---
+
+### including
+```
+{
+  "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "outDir": "build",
+      "sourceMap": true
+  }
+}
+```
+### Types
+
+|Built-in Data| Type| Beskrivelse|
+|-------------|-----|-------------|
+|Number |	number |	It is used to represent both Integer as well as Floating-Point numbers|
+|Boolean |	boolean |	Represents true and false|
+|String |string |	It is used to represent a sequence of characters|
+|Void |	void |	Generally used on function return-types|
+|Null 	|null |	It is used when an object does not have any value|
+|Undefined |	undefined |	Denotes value given to uninitialized variable|
+|Any |any |	If variable is declared with any data-type then any type of value can be assigned to that variable|
+
+### Interface 
+```
+IBook {title: string, author: string, published?: Date, pages?: number}
+```
+
+### Classes
+
+```
+class Car { 
+    //field 
+    engine:string; 
+  
+    //constructor 
+    constructor(engine:string) { 
+       this.engine = engine 
+    }  
+ 
+    //function 
+    disp():void { 
+       console.log("Engine is  :   "+this.engine) 
+    } 
+ }
+ const ferrai = new Car("ferrai");
+ ferrai.disp();
+ output:
+ Engine is  :   ferrai
+```
+```
+class GenericLogger<T,U>{
+log = (a:T,b:U) => console.log(`value 1 ${a}, value 2 ${b}`)
+}
+const ls = GenericLogger<String,String>();
+console.log(ls.log("dav,"med dig"))
+output: value 1 dav, value 2 med dig
+
+```
