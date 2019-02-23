@@ -578,6 +578,8 @@ output: [30,40,50]
 ### maps/sets
 
 ex. i maps/sets key og value ligesom hashmap og den har nogle udtrykke som hedder set, map ,delete
+
+ex. set ting samme i en list af ting dymaisk størrelse
 ```
 var oof = 'sos';
 let map = new Map();
@@ -592,3 +594,4 @@ console.log(map.has('sos') //true because oof === 'sos';
 ---
 ## 16.	Explain and demonstrate how es2015 supports modules (import and export) similar to what is offered by NodeJS
 ---
+
