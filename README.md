@@ -276,8 +276,9 @@ var Y = outer(); //outer() invoked the second time
 
 
 ex. Så nå den køre først gang køre den ind i function anden gang køre den global så kan den husk værdi næste gang
+det her expressions
 ```
-var outerv2 = (()=> {
+var outer = (()=> {
     var b = 10;
 
     return function() {
@@ -286,8 +287,8 @@ var outerv2 = (()=> {
     }
 }
 )();
-console.log(outerv2())
-console.log(outerv2())
+console.log(outer())
+console.log(outer())
 output: 
 11
 12
@@ -297,6 +298,12 @@ output:
 ---
 
 En IIFE ((Immediately Invoked Function Expression) er en JavaScript-funktion, der kører, så snart den er defineret
+```
+1. !function(){
+2.    console.log("Hej");
+3.}();
+output: Hej
+```
 
 ---
 ## 11.	JavaScripts Prototype
@@ -304,5 +311,29 @@ En IIFE ((Immediately Invoked Function Expression) er en JavaScript-funktion, de
 
 Hvert JavaScript-objekt har en prototype. Prototypen er også et objekt. Objekter oprettet ved hjælp af et objekt bogstaveligt eller med nyt objekt (), arver fra en prototype kaldet Object.prototype. Alle JavaScript-objekter (Dato, Array, RegExp, Funktion, ....) arver fra Object.prototype. 
 Det er blot en henvisning til et andet objekt og indeholder fælles attributter/egenskaber på tværs af alle forekomster af objektet. Et objekts prototypeattribut angiver det objekt, hvorfra det arver egenskaber.
+
+
+```
+1.function Person(first, last, age, eyecolor) {
+2.  this.firstName = first;
+3.  this.lastName = last;
+4.  this.age = age;
+5.  this.eyeColor = eyecolor;
+6.}
+7.
+8.var minFar = new Person("John", "Doe", 50, "blå");
+9. var minMor = new Person("Sally", "Rally", 48, "grøn");
+10. console.log(minFar)
+11. console.log(minMor)
+output:
+Person { firstName: 'John', lastName: 'Doe', age: 50, eyeColor: 'blå' }
+Person { firstName: 'Sally',lastName: 'Rally',age: 48,eyeColor: 'grøn' }
+```
+---
+## 12.	User-defined Callback Functions (writing your own functions that take a callback)
+---
+
+A Callback Function er en funktion, der skal udføres, efter at en anden funktion er færdiggjort - dermed navnet 'tilbagekald' (‘call back’). Funktioner der gør dette kaldes højere ordensfunktioner. 
+
 
 
