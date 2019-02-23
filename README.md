@@ -21,8 +21,8 @@ I form at javascript og java at javscript script sprog og at java er et kompiler
 |Java er ikke et klint side scripting sprog|JavaScript er et klint side scripting sprog at javascript køres mest på klint side|
 |Java program har file exension Java|JavaScrip har file extension “.js”|
 |Java har block based scope|Javascript har function based scope og object based context|
-	
-
+|java kan godt køre clintsite og servesite| men javscript kan køre clintsite|	
+|alt i java er class| javascript er prototype|
 Eksemple i from af java type 
 
 i java har statik type så skal man angive hvilket slags type man f.eks(integer,String,double mv.)
@@ -39,6 +39,8 @@ JavaScript:
 1. var hej = "hej";
 2. var i = 1;
 ```
+
+
 
 ![javascript-java](https://user-images.githubusercontent.com/32638165/53271927-25753500-36f0-11e9-812b-50984724a685.jpg)
 
