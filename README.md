@@ -23,6 +23,7 @@ I form at javascript og java at javscript script sprog og at java er et kompiler
 |Java har block based scope|Javascript har function based scope og object based context|
 |java kan godt køre clintsite og servesite| men javscript kan køre clintsite|	
 |alt i java er class| javascript er prototype|
+
 Eksemple i from af java type 
 
 i java har statik type så skal man angive hvilket slags type man f.eks(integer,String,double mv.)
