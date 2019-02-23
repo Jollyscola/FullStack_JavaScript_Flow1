@@ -476,10 +476,119 @@ filterDire(diretory2,ext, (err,data) => {
     });
 })
 ```
----
+
 # ES6,7,8... and TypeScript
 
 ---
 ## 15.	Provide examples and explain the es2015 features: let, arrow functions, this, rest parameters, de-structuring assignments, maps/sets etc.
 ---
 
+### Let
+```
+function Test(){
+let x = "out"
+  
+  if(true){
+  let x = "in"
+  console.log(x); // in
+  }
+  console.log(x); // out
+}
+
+Test()
+output: 
+in
+out
+```
+```
+function Test(){
+var x = "out"
+  
+  if(true){
+  var x = "in"
+  console.log(x); // in
+  }
+  console.log(x); // in
+}
+
+Test();
+output: 
+in
+in
+```
+
+
+### Array function
+```
+var s = ["ko","gris","hund",kat"]
+
+var s1 = s.map(element => element.length);
+output: [2,4,4,3]
+```
+
+### This
+
+```
+ex.
+
+```
+
+### rest parameters
+
+
+ex. Så man sætte så mange parameter i et array lavet den om til array. 
+```
+function sumAll(...args) { // args is the name for the array
+    let sum = 0;
+  
+    for (let arg of args) sum += arg;
+  
+    return sum;
+  }
+  
+  console.log(sumAll(1))
+  console.log(sumAll(1,5))
+  console.log(sumAll(1,3,4,5, 2))
+  output: 
+  1
+  6
+  15
+```
+
+### de-structuring assignments
+
+ex. Det at nå få fandt på ting fra et array og pakke samme ting i array eller pakke ud.
+
+```
+var a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+output: 10
+
+console.log(b);
+output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+output: [30,40,50]
+```
+
+### maps/sets
+
+ex. i maps/sets key og value ligesom hashmap og den har nogle udtrykke som hedder set, map ,delete
+```
+var oof = 'sos';
+let map = new Map();
+console.log(map.set('oof', 321)); // 321
+console.log(map.set('foo', 123)); //123
+console.log(map.get('foo')) // true
+ console.log(map.has('foo')) // true
+console.log(map.delete('foo')) 
+console.log(map.has('foo'))// false
+console.log(map.has('sos') //true because oof === 'sos'; 
+```
+---
+## 16.	Explain and demonstrate how es2015 supports modules (import and export) similar to what is offered by NodeJS
+---
