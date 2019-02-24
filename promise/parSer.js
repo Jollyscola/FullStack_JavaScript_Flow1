@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-/* async function serial(count) {
+async function serial(count) {
   const swappiPeople = [];
   for (let i = 1; i < count; i++) {
     swappiPeople.push(
@@ -9,7 +9,7 @@ const fetch = require("node-fetch");
         .then(res => { return res.json() }));
   }
   console.log(swappiPeople.map(p=>p.value.joke).join("\n "));
-} */
+}
 async function parallel(count) {
   const swappiPeople = [];
   for (let i = 1; i < count; i++) {
