@@ -252,16 +252,16 @@ Closure har tre anvendelsesområder:
 The JavaScript Module Pattern er et af de mest almindelige designmønstre, der bruges i JavaScript og med god grund. Modulmønsteret er let at bruge og skaber indkapsling af kodningen. Moduler bruges almindeligvis som singleton-stilobjekter, hvor kun én forekomst eksisterer. Modulmønsteret er fantastisk til service og test / TDD. Der er mange forskellige variationer af modulmønstre.
 
 ```
-function outer() {
-
-   var b = 10;
-   function inner() {
-        
-         var a = 20; 
-         console.log(a+b);
-    }
-   return inner;
-}
+1.function outer() {
+2.
+3.   var b = 10;
+4.   function inner() {
+5.        
+6.         var a = 20; 
+7.         console.log(a+b);
+8.    }
+9.   return inner;
+10. }
 
 var X = outer(); //outer() invoked the first time
 var Y = outer(); //outer() invoked the second time
@@ -271,17 +271,17 @@ var Y = outer(); //outer() invoked the second time
 Så når den kører første gang, kører den ind i function. Anden gang kører den global, så kan den huske værdien næste gang
 ### expressions
 ```
-var outer = (()=> {
-    var b = 10;
-
-    return function() {
-        b++;
-        return b;
-    }
-}
-)();
-console.log(outer())
-console.log(outer())
+1.var outer = (()=> {
+2.    var b = 10;
+3.
+4.    return function() {
+5.        b++;
+6.        return b;
+7.    }
+8. }
+9. )();
+10. console.log(outer())
+11. console.log(outer())
 output: 
 11
 12
