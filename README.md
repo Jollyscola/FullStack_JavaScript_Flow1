@@ -810,11 +810,11 @@ doom1(function(){
 
 ![pyramidofdoom](https://user-images.githubusercontent.com/32638165/53292032-d2b57f00-37bc-11e9-9bb6-311745bfd190.jpg)
 
-Man skal direkte undergå det her probelem i sted for skal man bruge Promises eller async await
+Man skal direkte ungå det her problem i sted for skal man bruge Promises eller async await
 
 ![callbackmate](https://user-images.githubusercontent.com/32638165/53292085-9a627080-37bd-11e9-90c3-2720cd952c67.png)
 
-### How to fix/ preven the callback/pyramid of hel
+### How to fix/ prevent the callback/pyramid of doom
 ```
 doom1()
 .then(doom2)
