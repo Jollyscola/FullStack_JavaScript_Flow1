@@ -943,11 +943,77 @@ Finally got here
 
 #### Why this often is the preferred way of handling promises
 
+Vi gemmer en rimelig mængde kode, når vi bruger async /await.
+Vi var ikke nødt til at skrive .then, oprette en anonym funktion til at håndtere svaret eller give navngive data til en variabel, som vi
+Ikke behøver at bruge.
+Vi undgik også at neste vores kode. Disse små fordele tilføjes hurtigt
+
+Promise
+
+```
+fetch(url)
+    .then(res => {
+        // console.log("res:", res.ok, res.status);
+
+        if (res.status === 200) {
+            return res.json();
+        } else {
+            return Promise.reject({ status: res.status, fullError: res.json() })
+        }
+    })
+```
+
+async/await
+```
+function getJSON(){
+return "Nice"
+}
+
+const makeResponse = async () => {
+    console.log(await getJSON())
+    return
+  }
+  
+  makeResponse()
+```
+
 
 
 #### Error handling with async/await
 
+Async /await gør det endeligt muligt at håndtere både synkron og asynkron fejl med den samme konstruktion, den gode gamle at prøve/fanget (try/catch).
+I eksemplet nedenfor med løfter (promises), vil try/catch ikke kunne håndteres, hvis JSON.parse fejler, fordi det sker inden for et løfte (a promise).
+Vi skal call.catch løftet og duplikere vores fejlhåndteringskode, som (forhåbentlig) bliver mere sofistikeret end console.log i din produktionskode.
 
-
+```
+.catch(e => {
+        if (e.status) {
+            e.fullError.then(msg => console.log("messeger: ", msg))
+        } else {
+            console.log("Aw:", e.code)
+        }
+```
 #### Serial or parallel execution with async/await.
+
+Hvis du vil udføre forskellige løfte (promise) metoder i sekvenser/rækkefølge, dvs. udføre en efter en, er det let at bruge Async / Await og koden ligner synkroniseret (synchronous).
+```
+async function navnfrafamile(x,y){
+    return x + " "+ y
+}
+
+async function fammile(){
+ 
+    let f1 = await navnfrafamile("Jens","Hans");
+    let f2 = await navnfrafamile("Mr.","Bean");
+    let f3 = await navnfrafamile("Mim","Rasmus");
+     
+    let famileresult = f1 + ", "+ f2+ ", " +f3;
+    console.log(famileresult);
+    return famileresult;
+     
+    }
+     
+    fammile();
+  output: Jens Hans, Mr. Bean, Mim Rasmus
+```
 
