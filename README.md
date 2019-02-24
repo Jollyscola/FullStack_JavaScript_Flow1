@@ -856,12 +856,11 @@ const mypromise = function myPromise(msg,delay){
   }
 
   module.exports = mypromise;
-  ```
-  
-
-
-    promiseExercise.js
 ```
+
+promiseExercise.js
+ ```
+    
 const myPromise = require("./myPromise");
 
 let results = [];
@@ -883,6 +882,7 @@ myPromise("hello", 2000)
 ---
 ## 25. Explain about JavaScripts async/await, how it relates to promises and reasons to use it compared to the plain promise API.
 ---
+promise1.js
 ```
 onst fetch = require("node-fetch");
 const url = "https://swapi.co/api/people/1/";
@@ -938,17 +938,16 @@ fetch(url)
 Finally got here
 ```
 
-### 26. Provide examples to demonstrate
+### Provide examples to demonstrate:
+
+
+#### Why this often is the preferred way of handling promises
 
 
 
-#### 27. Why this often is the preferred way of handling promises
+#### Error handling with async/await
 
 
 
-#### 28. Error handling with async/await
-
-
-
-#### 29. Serial or parallel execution with async/await.
+#### Serial or parallel execution with async/await.
 
