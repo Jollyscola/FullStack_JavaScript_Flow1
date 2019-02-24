@@ -84,7 +84,7 @@ Node er en slags ”virtual” maskine som ligner Java. Node kører på multi-pl
 
 Vil man gerne køre Node, skal man installere de forskellige Node pakker. Det udtryk man bruger på Node.js er udtrykket npm kort sagt betyder Node.js: node package management, som er brugt til JS programmet.
 
-ex. Nå den er i et event og nå man skal opdater mange ting samtidig og man kan bruge det til database. 
+Når den er i et event og når man skal opdatere mange ting samtidig og man kan bruge det til database. 
 
 
 ---
@@ -120,27 +120,21 @@ ESLint er et værktøj til at identificere og rapportere om mønstre, der findes
 •	ESLint bruger en AST til at evaluere mønstre i kode.
 •	ESLint er helt plugget, hver enkelt regel er et plugin, og du kan tilføje flere ved kørsel.
 
-ex: 
-man kan få explment
+ Erklæringen "brug strenge (use strict)"; instruerer browseren til at bruge strenge tilstanden (Strict mode), hvilket er et reduceret og sikrere funktionssæt af JavaScript.
+    Liste over funktioner (ikke-udtømmende):
+•	Tillader globale variabler. (Fanger manglende var deklarationer og typografier i variable navne)
+•	Lydløse mislykkede opgaver vil kaste fejl i streng tilstand (strict mode) (tildeling af NaN = 5;)
+•	Forsøg på at slette uundgåelige egenskaber vil kaste (slette Object.prototype)
+•	Kræver alle egenskaber (property) i et objekt bogstaveligt at være unikt (var x = {x1: "1", x1: "2"})
+•	Funktionsparameternavne skal være unikke (funktions sum (x, x) {...})
+•	Forbyder octal syntax (var x = 023; nogle devs antager fejlagtigt, at et foregående nul gør intet for at ændre nummeret.)
+•	Forbyder det med søgeord
+•	eval i streng tilstand (strict mode) introducerer ikke nye variabler
+•	Forbud at slette almindelige navne (slet x;)
+•	Forbyder binding eller tildeling af navnene eval og argumenter i enhver form
+•	Streng tilstand (strict mode) alias ikke egenskaberne for argumentobjektet med de formelle parametre (dvs. i funktionssummen (a, b) {returargument [0] + b;} Dette virker, fordi argumenter [0] er bundet til en osv).
+•	arguments.callee understøttes ikke
 
-ex:
-
-  
-
-  The statement "use strict"; instructs the browser to use the Strict mode, which is a reduced and safer feature set of JavaScript.
-    List of features (non-exhaustive)
-    Disallows global variables. (Catches missing var declarations and typos in variable names
-    Silent failing assignments will throw error in strict mode (assigning NaN = 5;)
-    Attempts to delete undeletable properties will throw (delete Object.prototype)
-    Requires all property names in an object literal to be unique (var x = {x1: "1", x1: "2"})
-    Function parameter names must be unique (function sum (x, x) {...})
-    Forbids octal syntax (var x = 023; some devs assume wrongly that a preceding zero does nothing to change the number.)
-    Forbids the with keyword
-    eval in strict mode does not introduce new variables
-    Forbids deleting plain names (delete x;)
-    Forbids binding or assignment of the names eval and arguments in any form
-    Strict mode does not alias properties of the arguments object with the formal parameters. (i.e. in function sum (a,b) { return arguments[0] + b;} This works because arguments[0] is bound to a and so on. )
-    arguments.callee is not supported
 
 
 
@@ -213,11 +207,10 @@ output: Hans
 
 this i JavaScript refererer til "ejer" af den funktion som udføres eller til objektet som funktionen er en metode af. I Java refererer dette til det nuværende instansobjekt, som metoden udfører.
 
-ex.
-hvis det er helt alene eller ind i function`this` så er et global objekt (men kun i function hvis an ikke kører strict)
 
+Hvis det er helt alene eller ind i en function`this`, så er det et global objekt (men kun i function, hvis man ikke kører strict)
+Hvis inde i function, så giver den globat object window:
 
-Hvis  ind i function så give den globat object window
 ```
 1.function myfunction(){
 2.return this;
@@ -275,8 +268,8 @@ var Y = outer(); //outer() invoked the second time
 ```
 
 
-ex. Så nå den køre først gang køre den ind i function anden gang køre den global så kan den husk værdi næste gang
-det her expressions
+Så når den kører første gang, kører den ind i function. Anden gang kører den global, så kan den huske værdien næste gang
+### expressions
 ```
 var outer = (()=> {
     var b = 10;
@@ -297,7 +290,7 @@ output:
 ## 10.	Immediately-Invoked Function Expressions (IIFE)
 ---
 
-En IIFE ((Immediately Invoked Function Expression) er en JavaScript-funktion, der kører, så snart den er defineret
+En IIFE (Immediately Invoked Function Expression) er en JavaScript-funktion, der kører, så snart den er defineret
 ```
 1. !function(){
 2.    console.log("Hej");
@@ -336,7 +329,7 @@ Person { firstName: 'Sally',lastName: 'Rally',age: 48,eyeColor: 'grøn' }
 A Callback Function er en funktion, der skal udføres, efter at en anden funktion er færdiggjort - dermed navnet 'tilbagekald' (‘call back’). Funktioner der gør dette kaldes højere ordensfunktioner. 
 
 
-ex .Det her er et callback med en parameter.
+Det her er et callback med én parameter:
 ```
 var names = ['lars', 'hans', 'jan', 'bob', 'bo']
 
@@ -362,7 +355,7 @@ console.log(myFilter(names, myFilterto3))
 output: ['lars','hans']
 ```
 
-ex: callback med innerline function.
+Det her er et callback med innerline function:
 ```
 var names = ["Lars", "Peter", "Jan", "Bo"];
 function myFilter(array, callback) {
@@ -391,11 +384,12 @@ output: ['Lars', 'Peter, 'Jan']
 ## 13.	Explain the methods map, filter and reduce
 ---
 
-ex. map og filter nå de køre igennem et array så lavet de et nyt array
-filter: lavet en betingelse hvilke elementer der kan komme i det ny array de andre blev fjern
-map: den køre function på alle elementer af resultet kommet ind i det ny array
-reduce: den samler elementer til et resultat, så den kan lav største værdi mindst værdi sum af værdi
-i reduce kan man også lavet et nyt hvis f.eks det eksemple jeg lagt med.
+Når map og filter kører igennem et array, så laver de et nyt array.
+filter: laver en betingelse om hvilke elementer, der kan komme i det ny array. De andre bliver fjernet.
+map: funktionen kører på alle elementer af resultatet og kommer ind i et nyt array.
+reduce: den samler elementer til et resultat, så den kan vise den største værdi eller mindste værdi eller summen af værdier. I reduce funktionen er der 4 argumenter: Accumulator, Current Value, Current Index og Source Array.
+I reduce kan man også lave et array, som jeg har taget med som eksempel nedenfor.
+
 ```
 var names = ['lars', 'hans', 'jan', 'bob', 'bo']
 var dav = names.filter((maps1) => {
@@ -444,7 +438,7 @@ console.log(s)
 ## 14.	Provide examples of user-defined reusable modules implemented in Node.js
 ---
 
-ex. i den her fileprint genanvendelige module for den her fileprint
+fileprint, genanvendelig modul for den her fileprint:
 ```
 function fileprint(dirname, ext, callback) {
     fs.readdir(dirname, (err, data) => {
@@ -484,6 +478,10 @@ filterDire(diretory2,ext, (err,data) => {
 ---
 
 ### Let
+•	Let - tillader dig at erklære variabler, som er begrænset i rækkevidde ”to the block”, erklæringen eller det udtryk hvor det bruges på. Dette er i modsætning til var-søgeordet, som definerer en variabel globalt eller lokalt til en hel funktion uanset blok-omfanget.
+•	Variabler der erklæres ved Let, har som rækkevidde den blok hvori de er defineret, såvel som i
+eventuelle underblokke. På den måde arbejder Let meget lig var. Den største forskel er at omfanget af en var-variabel er den hele ”enclosing funktion”.
+
 ```
 function Test(){
 let x = "out"
@@ -518,7 +516,8 @@ in
 ```
 
 
-### Array function
+### Arrow function
+En pil-funtions (an arrow funktion) udtryk er et syntaktisk kompakt alternativ til et almindeligt funktionsudtryk men uden sine egne bindinger til dette, argumenter, super eller new.target søgeord. Pil-funktionsudtryk er dårlig egnet som metoder, og de kan ikke bruges som “constructors”.
 ```
 var s = ["ko","gris","hund",kat"]
 
@@ -527,13 +526,33 @@ output: [2,4,4,3]
 ```
 
 ### This
+I de fleste tilfælde bestemmes værdien af dette efter hvordan en funktion kaldes. Det kan ikke sættes som
+opgave under udførelse og det kan være anderledes hver gang funktionen kaldes. ES5 introducerede en bindende metode til at sætte værdien af en funktion uanset hvad den kaldes og ES6 introducerede pil-funktioner (arrow funktions), hvis dette er ”lexically” scoped (det er sat til denne værdi af
+den omsluttede eksekveringskontekst (the enclosing execution context)).
+I den globale udførelses kontext (udenfor enhver funktion) henviser dette til det globale objekt,
+hvad enten det er i ”strict mode” eller ej.
 
 ```
-ex.
+function Person(fn, ln) {
+	this.first_name = fn;
+	this.last_name = ln;
 
+	this.displayName = function() {
+		console.log(`Name: ${this.first_name} ${this.last_name}`);
+	}
+}
+
+let person = new Person("John", "Reed");
+person.displayName();  // Prints Name: John Reed
+let person2 = new Person("Paul", "Adams");
+person2.displayName(); // Prints Name: Paul Adams
 ```
 
-### rest parameters
+### Rest parameters
+Rest parameter syntaxen giver os mulighed for at repræsentere et ubestemt antal argumenter, som en
+array. Hvis den sidste navngivne argument for en funktion er præfikseret med ..., bliver det et array, hvis
+elementer fra 0 (inklusive) til theArgs.length (eksklusive) leveres af de egentlige argumenter
+passeret til funktionen.
 
 
 ex. Så man sætte så mange parameter i et array lavet den om til array. 
@@ -557,7 +576,7 @@ function sumAll(...args) { // args is the name for the array
 
 ### de-structuring assignments
 
-ex. Det at nå få fandt på ting fra et array og pakke samme ting i array eller pakke ud.
+Destructuring opgaver (assignments) er en cool funktion, der fulgte med ES6. De-strukturering er et JavaScript-udtryk, der gør det muligt at udpakke værdier fra arrayer eller egenskaber fra objekter til forskellige variabler.
 
 ```
 var a, b, rest;
@@ -577,9 +596,9 @@ output: [30,40,50]
 
 ### maps/sets
 
-ex. i maps/sets key og value ligesom hashmap og den har nogle udtrykke som hedder set, map ,delete
+I maps/sets key og value ligesom i hashmap og den har nogle udtryk som hedder set, map ,delete.
+Sæt ting sammen i en liste af ting i dynamisk størrelse
 
-ex. set ting samme i en list af ting dymaisk størrelse
 ```
 var oof = 'sos';
 let map = new Map();
@@ -595,7 +614,12 @@ console.log(map.has('sos') //true because oof === 'sos';
 ## 16.	Explain and demonstrate how es2015 supports modules (import and export) similar to what is offered by NodeJS
 ---
 
-ex: export hver ting der skal export  
+•	Javascript plejede ikke at have indbyggede moduler (built-in modules), men javascript-community kom op med ”work-arounds”, som gjorde det muligt, at få moduler.
+•	To af disse ”work-around” arbejdsstandarder er commonJS-moduler med node.js-moduler som implementering og Asynkront Modul Definition (AMD) med kravJS (requireJS) som implementering.
+•	commonJS (Node.js) gør det muligt at komprimere syntax, den er designet til synkron indlæsning, og hvor den primære brug er på serveren.
+•	Asynkron Modul Definition (requireJS) gør en lidt mere kompliceret syntaks, der gør det muligt for AMD at arbejde uden eval () (eller et kompileringstrin), det er designet til asynkron læsning, og det er primært brug i browseren.
+•	ES6 bruger både commonjs og AMD
+Es2015 (ES6) modul import og eksport eksempel: 
 
 Export
 ```
@@ -621,7 +645,7 @@ Jens Hans
 ## 17.	Provide an example of ES6 inheritance and reflect over the differences between Inheritance in Java and in ES6.
 ---
 
-i form af prototype kan man lavet Inheritance.
+I form af prototype kan man lave Inheritance.
 
 ```
 class Dyr {
@@ -755,6 +779,9 @@ function identity(arg: number): number {
 ## 20.	Explain the ECMAScript Proposal Process for how new features are added to the language (the TC39 Process)
 ---
 
+Ecma TC39-udvalget er ansvarlig for udviklingen af ECMAScript-programmeringssproget og udarbejdelse af specifikationen. Udvalget arbejder efter konsensus og har skønsbeføjelse til at ændre specifikationen som det skønnes hensigtsmæssigt. Den generelle proces til ændring af specifikationen er imidlertid som følger.
+Ændringer i sproget udvikles ved hjælp af en proces, der giver retningslinjer for udvikling af en tilføjelse fra en ide til en fuldt specificeret funktion, komplet med accepttest og flere implementeringer. 
+Der er fem faser: et strawman stadium og 4 "modenheds" faser. TC39-udvalget skal godkende accept for hvert trin. Oversigten kan ses her: https://tc39.github.io/process-document/
 
 
 
@@ -807,28 +834,121 @@ doom1()
 ---
 ## 23.	Example(s) that demonstrate how to implement our own promise-solutions.
 ---
-![promise Example](https://github.com/Jollyscola/FullStack_JavaScript_Flow1/blob/master/promise/myPromise.js)
+
+ ![promise Example](https://github.com/Jollyscola/FullStack_JavaScript_Flow1/blob/master/promise/myPromise.js)
+ 
 ---
 ## 24.	Example(s) that demonstrate error handling with promises
 ---
 
+MyPromise
+```
+const mypromise = function myPromise(msg,delay){
+    return new Promise((resolve,reject)=>{
+      setTimeout(()=>{
+        let error = false; // Math.random() * 10 < 2;
+        if(error){
+          return reject(new Error("UPPPs"));
+        }
+        return resolve(msg.toUpperCase());
+      },delay);
+    })
+  }
 
+  module.exports = mypromise;
+  ```
+  
+
+
+    promiseExercise.js
+```
+const myPromise = require("./myPromise");
+
+let results = [];
+
+myPromise("hello", 2000)
+    .then(msg => {
+        results.push(msg);
+        return myPromise("hello again", 2000)
+    })
+    .then(msg => {
+        results.push(msg);
+        return myPromise("hello again again", 3000)
+    })
+    .then(r => results.push(r))
+    .catch(error => { console.log(error) })
+    .finally(() => console.log(results))
+  output: [ 'hello', 'hello again', 'hello again again' ]
+```
 ---
 ## 25. Explain about JavaScripts async/await, how it relates to promises and reasons to use it compared to the plain promise API.
 ---
+```
+onst fetch = require("node-fetch");
+const url = "https://swapi.co/api/people/1/";
 
----
-## 26. Provide examples to demonstrate
----
+fetch(url)
+    .then(res => {
+        // console.log("res:", res.ok, res.status);
 
----
-## 27. Why this often is the preferred way of handling promises
----
+        if (res.status === 200) {
+            return res.json();
+        } else {
+            return Promise.reject({ status: res.status, fullError: res.json() })
+        }
+    })
+    .then(data => console.log("OK:", data))
+    .catch(e => {
+        if (e.status) {
+            e.fullError.then(msg => console.log("messeger: ", msg))
+        } else {
+            console.log("Aw:", e.code)
+        }
 
----
-## 28. Error handling with async/await
----
+    })
 
----
-## 29. Serial or parallel execution with async/await.
----
+    .finally(() => console.log("Finally got here"))
+    
+    output:
+    { name: 'Luke Skywalker',
+  height: '172',
+  mass: '77',
+  hair_color: 'blond',
+  skin_color: 'fair',
+  eye_color: 'blue',
+  birth_year: '19BBY',
+  gender: 'male',
+  homeworld: 'https://swapi.co/api/planets/1/',
+  films:
+   [ 'https://swapi.co/api/films/2/',
+     'https://swapi.co/api/films/6/',
+     'https://swapi.co/api/films/3/',
+     'https://swapi.co/api/films/1/',
+     'https://swapi.co/api/films/7/' ],
+  species: [ 'https://swapi.co/api/species/1/' ],
+  vehicles:
+   [ 'https://swapi.co/api/vehicles/14/',
+     'https://swapi.co/api/vehicles/30/' ],
+  starships:
+   [ 'https://swapi.co/api/starships/12/',
+     'https://swapi.co/api/starships/22/' ],
+  created: '2014-12-09T13:50:51.644000Z',
+  edited: '2014-12-20T21:17:56.891000Z',
+  url: 'https://swapi.co/api/people/1/' }
+Finally got here
+```
+
+### 26. Provide examples to demonstrate
+
+
+
+#### 27. Why this often is the preferred way of handling promises
+
+
+
+#### 28. Error handling with async/await
+
+
+
+#### 29. Serial or parallel execution with async/await.
+
